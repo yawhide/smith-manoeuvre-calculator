@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.18",
-    "dotenv": "^16.4.4",
+    "dotenv": "^16.4.5",
     "ora": "^8.0.1",
     "typescript": "~5.3.3",
     "vite": "~5.1.2",

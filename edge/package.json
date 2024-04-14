@@ -30,7 +30,7 @@
     "happy-dom": "^13.3.8",
     "toml": "^3.0.0",
     "typescript": "~5.3.3",
-    "vite": "~5.1.2",
+    "vite": "~5.1.7",
     "vitest": "~1.2.2",
     "vitest-environment-miniflare": "^2.14.2"
   }

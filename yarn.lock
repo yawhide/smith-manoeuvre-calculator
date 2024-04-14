@@ -8471,7 +8471,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino-abstract-transport@npm:^1.0.0, pino-abstract-transport@npm:v1.1.0":
+"pino-abstract-transport@npm:^1.0.0, pino-abstract-transport@npm:^1.1.0, pino-abstract-transport@npm:v1.1.0":
   version: 1.1.0
   resolution: "pino-abstract-transport@npm:1.1.0"
   dependencies:
@@ -8524,7 +8524,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino@npm:^8.17.1, pino@npm:^8.18.0":
+"pino@npm:^8.17.1":
   version: 8.18.0
   resolution: "pino@npm:8.18.0"
   dependencies:
@@ -8542,6 +8542,27 @@ __metadata:
   bin:
     pino: bin.js
   checksum: 10/c9789a4e75bd5bb5d70561e429b7c23b2da1d42a69181814e93b2de53a3f2cdcb890f737927663fe92bab1e16e50aab1c7e62a00d4be4520fe7e8e9cbf1a838a
+  languageName: node
+  linkType: hard
+
+"pino@npm:^8.20.0":
+  version: 8.20.0
+  resolution: "pino@npm:8.20.0"
+  dependencies:
+    atomic-sleep: "npm:^1.0.0"
+    fast-redact: "npm:^3.1.1"
+    on-exit-leak-free: "npm:^2.1.0"
+    pino-abstract-transport: "npm:^1.1.0"
+    pino-std-serializers: "npm:^6.0.0"
+    process-warning: "npm:^3.0.0"
+    quick-format-unescaped: "npm:^4.0.3"
+    real-require: "npm:^0.2.0"
+    safe-stable-stringify: "npm:^2.3.1"
+    sonic-boom: "npm:^3.7.0"
+    thread-stream: "npm:^2.0.0"
+  bin:
+    pino: bin.js
+  checksum: 10/c236ad50ea6fa533b25275928ac1c3c96d6c06df08f79a70d91a571fcf1b6fe0570c6f4b00eb5ad201fa9b4a9292d4cfe21fd8af29fa1df44aa1963d35c1bf8b
   languageName: node
   linkType: hard
 
@@ -9474,7 +9495,7 @@ __metadata:
     http-proxy-middleware: "npm:^2.0.6"
     nanoid: "npm:^5.0.5"
     openai: "npm:^4.28.0"
-    pino: "npm:^8.18.0"
+    pino: "npm:^8.20.0"
     pino-http: "npm:^9.0.0"
     pino-pretty: "npm:^10.3.1"
     supertest: "npm:^6.3.4"

@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "dotenv": "^16.4.4",
+    "dotenv": "^16.4.5",
     "execa": "^8.0.1",
     "get-port": "^7.0.0",
     "got": "^13.0.0",

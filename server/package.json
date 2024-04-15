@@ -41,7 +41,7 @@
     "@types/supertest": "^6.0.2",
     "@types/ws": "^8.5.10",
     "envars": "^1.0.2",
-    "get-port": "^7.0.0",
+    "get-port": "^7.1.0",
     "supertest": "^6.3.4",
     "type-fest": "^4.10.2",
     "typescript": "~5.3.3",

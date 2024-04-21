@@ -38,7 +38,7 @@
     "@babel/core": "^7.23.9",
     "@emotion/babel-plugin": "^11.11.0",
     "@types/node": "^20.11.18",
-    "@types/react": "^18.2.55",
+    "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.2.1",
     "envars": "^1.0.2",

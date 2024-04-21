@@ -27,7 +27,7 @@
     "decimal.js": "^10.4.3",
     "firebase": "^10.8.0",
     "jotai": "^2.6.4",
-    "jotai-effect": "^0.5.0",
+    "jotai-effect": "^1.0.0",
     "localforage": "^1.10.0",
     "notistack": "^3.0.1",
     "react": "^18.2.0",

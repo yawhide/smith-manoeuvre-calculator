@@ -3370,7 +3370,7 @@ __metadata:
     firebase: "npm:^10.8.0"
     happy-dom: "npm:^13.3.8"
     jotai: "npm:^2.6.4"
-    jotai-effect: "npm:^0.5.0"
+    jotai-effect: "npm:^1.0.0"
     localforage: "npm:^1.10.0"
     notistack: "npm:^3.0.1"
     react: "npm:^18.2.0"
@@ -7079,12 +7079,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jotai-effect@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "jotai-effect@npm:0.5.0"
+"jotai-effect@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "jotai-effect@npm:1.0.0"
   peerDependencies:
     jotai: ">=2.5.0"
-  checksum: 10/8aad4a968e479ae96141f504afa3156e924d154690e2e874d02c6aa42cbd2a78eed80717d6b31d1263a503c3416ecc582301ff689f2097790eb70bf4cef6c280
+  checksum: 10/4393c88deaebbfd4e8fad46ac1b7d03235d0dd684c56049e8c57b14a1298695e80b047c0b1561cbb5af694db9ea819aaaf6ae9c1a35b27d4ef98532b39065d15
   languageName: node
   linkType: hard
 

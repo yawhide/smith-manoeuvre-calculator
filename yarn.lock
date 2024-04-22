@@ -3581,7 +3581,7 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-router-dom: "npm:^6.22.0"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.1.7"
+    vite: "npm:~5.2.6"
     vitest: "npm:~1.2.2"
   languageName: unknown
   linkType: soft
@@ -4419,7 +4419,7 @@ __metadata:
     dotenv: "npm:^16.4.5"
     ora: "npm:^8.0.1"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.1.7"
+    vite: "npm:~5.2.6"
     vite-node: "npm:~1.5.0"
     vitest: "npm:~1.2.2"
     zod: "npm:^3.22.4"
@@ -4684,7 +4684,7 @@ __metadata:
     jose: "npm:^5.2.3"
     toml: "npm:^3.0.0"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.1.7"
+    vite: "npm:~5.2.6"
     vitest: "npm:~1.2.2"
     vitest-environment-miniflare: "npm:^2.14.2"
     web-auth-library: "npm:^1.0.3"
@@ -9529,7 +9529,7 @@ __metadata:
     react: "npm:^18.2.0"
     relay-config: "npm:^12.0.1"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.1.7"
+    vite: "npm:~5.2.6"
     vitest: "npm:~1.2.2"
   languageName: unknown
   linkType: soft
@@ -9609,7 +9609,7 @@ __metadata:
     miniflare: "npm:^3.20240129.2"
     prettier: "npm:^3.2.5"
     toml: "npm:^3.0.0"
-    vite: "npm:^5.1.7"
+    vite: "npm:^5.2.6"
     wrangler: "npm:^3.28.2"
     zx: "npm:^7.2.3"
   languageName: unknown
@@ -9714,7 +9714,7 @@ __metadata:
     supertest: "npm:^6.3.4"
     type-fest: "npm:^4.10.2"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.1.7"
+    vite: "npm:~5.2.6"
     vite-node: "npm:~1.5.0"
     vitest: "npm:~1.2.2"
     ws: "npm:^8.16.0"
@@ -10760,7 +10760,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.1.7":
+"vite@npm:^5.2.6, vite@npm:~5.2.6":
   version: 5.2.10
   resolution: "vite@npm:5.2.10"
   dependencies:
@@ -10797,46 +10797,6 @@ __metadata:
   bin:
     vite: bin/vite.js
   checksum: 10/a0c4ac7b95e9a2a59f4e73e5b42a63f33569f5ec505af9dd019f19ff419fd20d66ad9aad6708987d4da173d485358f0024f410af78ac97cf5c92a38f8c96c451
-  languageName: node
-  linkType: hard
-
-"vite@npm:~5.1.7":
-  version: 5.1.7
-  resolution: "vite@npm:5.1.7"
-  dependencies:
-    esbuild: "npm:^0.19.3"
-    fsevents: "npm:~2.3.3"
-    postcss: "npm:^8.4.35"
-    rollup: "npm:^4.2.0"
-  peerDependencies:
-    "@types/node": ^18.0.0 || >=20.0.0
-    less: "*"
-    lightningcss: ^1.21.0
-    sass: "*"
-    stylus: "*"
-    sugarss: "*"
-    terser: ^5.4.0
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  peerDependenciesMeta:
-    "@types/node":
-      optional: true
-    less:
-      optional: true
-    lightningcss:
-      optional: true
-    sass:
-      optional: true
-    stylus:
-      optional: true
-    sugarss:
-      optional: true
-    terser:
-      optional: true
-  bin:
-    vite: bin/vite.js
-  checksum: 10/f1b31e32699f33ba18501413a35e1f7ced20cbf39510543c59041c3482aa877a10970f2ad64623707671c112e3ef3ea3095f125911e65fcb165bdee5a4116263
   languageName: node
   linkType: hard
 

@@ -4680,7 +4680,7 @@ __metadata:
     "@hono/zod-validator": "npm:^0.1.11"
     "@types/node": "npm:^20.11.18"
     happy-dom: "npm:^13.3.8"
-    hono: "npm:^4.2.5"
+    hono: "npm:^4.3.2"
     jose: "npm:^5.2.3"
     toml: "npm:^3.0.0"
     typescript: "npm:~5.3.3"
@@ -6676,10 +6676,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hono@npm:^4.2.5":
-  version: 4.2.5
-  resolution: "hono@npm:4.2.5"
-  checksum: 10/18c464f5bab7b8ce887f24b6155da6573ffde4a031141677b66f31b5d50c87d661f655e8cc066fc9879066c51c7fd5e2fc094b2bbcc72b90d2b3cb62d9033760
+"hono@npm:^4.3.2":
+  version: 4.3.2
+  resolution: "hono@npm:4.3.2"
+  checksum: 10/2b4a7f829a4ca91620f81bea347649453e77ed4bfc5674cd3bfd1b1ee0df9b4af5811536ef5627fb905c1ec5c5610c3b1359eaba4f2293c9235f20bc66068a7c
   languageName: node
   linkType: hard
 

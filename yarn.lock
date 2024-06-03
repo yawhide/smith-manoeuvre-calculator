@@ -3581,7 +3581,7 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-router-dom: "npm:^6.22.0"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.2.6"
+    vite: "npm:~5.2.11"
     vitest: "npm:~1.2.2"
   languageName: unknown
   linkType: soft
@@ -4419,7 +4419,7 @@ __metadata:
     dotenv: "npm:^16.4.5"
     ora: "npm:^8.0.1"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.2.6"
+    vite: "npm:~5.2.11"
     vite-node: "npm:~1.5.0"
     vitest: "npm:~1.2.2"
     zod: "npm:^3.22.4"
@@ -4681,10 +4681,10 @@ __metadata:
     "@types/node": "npm:^20.11.18"
     happy-dom: "npm:^13.3.8"
     hono: "npm:^4.2.7"
-    jose: "npm:^5.2.3"
+    jose: "npm:^5.3.0"
     toml: "npm:^3.0.0"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.2.6"
+    vite: "npm:~5.2.11"
     vitest: "npm:~1.2.2"
     vitest-environment-miniflare: "npm:^2.14.2"
     web-auth-library: "npm:^1.0.3"
@@ -7316,10 +7316,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jose@npm:^5.2.3":
-  version: 5.2.4
-  resolution: "jose@npm:5.2.4"
-  checksum: 10/0b09df51d70dad34d301f444dfe44681a157c5e166df88e4a05892ddd7181e42e883c83ed7fae8a41960237343dd4c72282c4aeb10ec94801782be47e3f62170
+"jose@npm:^5.3.0":
+  version: 5.4.0
+  resolution: "jose@npm:5.4.0"
+  checksum: 10/1e1664d2525f57c390d7031c8e505d5483e162fa42f5e65d3ab7c40e15ae8be5d0475d05d88c91660e115a0963e0c09e46cca78c212750143331eb68f7ee9ff4
   languageName: node
   linkType: hard
 
@@ -9529,7 +9529,7 @@ __metadata:
     react: "npm:^18.2.0"
     relay-config: "npm:^12.0.1"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.2.6"
+    vite: "npm:~5.2.11"
     vitest: "npm:~1.2.2"
   languageName: unknown
   linkType: soft
@@ -9609,7 +9609,7 @@ __metadata:
     miniflare: "npm:^3.20240129.2"
     prettier: "npm:^3.2.5"
     toml: "npm:^3.0.0"
-    vite: "npm:^5.2.6"
+    vite: "npm:^5.2.11"
     wrangler: "npm:^3.28.2"
     zx: "npm:^7.2.3"
   languageName: unknown
@@ -9714,7 +9714,7 @@ __metadata:
     supertest: "npm:^6.3.4"
     type-fest: "npm:^4.10.2"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.2.6"
+    vite: "npm:~5.2.11"
     vite-node: "npm:~1.5.0"
     vitest: "npm:~1.2.2"
     ws: "npm:^8.16.0"
@@ -10760,9 +10760,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.2.6, vite@npm:~5.2.6":
-  version: 5.2.10
-  resolution: "vite@npm:5.2.10"
+"vite@npm:^5.2.11, vite@npm:~5.2.11":
+  version: 5.2.12
+  resolution: "vite@npm:5.2.12"
   dependencies:
     esbuild: "npm:^0.20.1"
     fsevents: "npm:~2.3.3"
@@ -10796,7 +10796,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10/a0c4ac7b95e9a2a59f4e73e5b42a63f33569f5ec505af9dd019f19ff419fd20d66ad9aad6708987d4da173d485358f0024f410af78ac97cf5c92a38f8c96c451
+  checksum: 10/c27d3efff93016e8171b6a362f605ad5f78e24086292987097ad4a7382ae78d9e0659065976a13bf7b51ba0f593d675579010692097ef36d8a5cc965f3efec4c
   languageName: node
   linkType: hard
 

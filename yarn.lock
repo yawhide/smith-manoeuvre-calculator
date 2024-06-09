@@ -3625,7 +3625,7 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-router-dom: "npm:^6.22.0"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.2.11"
+    vite: "npm:~5.2.13"
     vitest: "npm:~1.2.2"
   languageName: unknown
   linkType: soft
@@ -4470,7 +4470,7 @@ __metadata:
     dotenv: "npm:^16.4.5"
     ora: "npm:^8.0.1"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.2.11"
+    vite: "npm:~5.2.13"
     vite-node: "npm:~1.5.0"
     vitest: "npm:~1.2.2"
     zod: "npm:^3.22.4"
@@ -4742,7 +4742,7 @@ __metadata:
     jose: "npm:^5.3.0"
     toml: "npm:^3.0.0"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.2.11"
+    vite: "npm:~5.2.13"
     vitest: "npm:~1.2.2"
     vitest-environment-miniflare: "npm:^2.14.2"
     web-auth-library: "npm:^1.0.3"
@@ -9616,7 +9616,7 @@ __metadata:
     react: "npm:^18.2.0"
     relay-config: "npm:^12.0.1"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.2.11"
+    vite: "npm:~5.2.13"
     vitest: "npm:~1.2.2"
   languageName: unknown
   linkType: soft
@@ -9696,7 +9696,7 @@ __metadata:
     miniflare: "npm:^3.20240129.2"
     prettier: "npm:^3.2.5"
     toml: "npm:^3.0.0"
-    vite: "npm:^5.2.11"
+    vite: "npm:^5.2.13"
     wrangler: "npm:^3.60.0"
     zx: "npm:^7.2.3"
   languageName: unknown
@@ -9801,7 +9801,7 @@ __metadata:
     supertest: "npm:^6.3.4"
     type-fest: "npm:^4.10.2"
     typescript: "npm:~5.3.3"
-    vite: "npm:~5.2.11"
+    vite: "npm:~5.2.13"
     vite-node: "npm:~1.5.0"
     vitest: "npm:~1.2.2"
     ws: "npm:^8.16.0"
@@ -10868,9 +10868,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.2.11, vite@npm:~5.2.11":
-  version: 5.2.12
-  resolution: "vite@npm:5.2.12"
+"vite@npm:^5.2.13, vite@npm:~5.2.13":
+  version: 5.2.13
+  resolution: "vite@npm:5.2.13"
   dependencies:
     esbuild: "npm:^0.20.1"
     fsevents: "npm:~2.3.3"
@@ -10904,7 +10904,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10/c27d3efff93016e8171b6a362f605ad5f78e24086292987097ad4a7382ae78d9e0659065976a13bf7b51ba0f593d675579010692097ef36d8a5cc965f3efec4c
+  checksum: 10/eee65eebff8c839935fdf1a6f2bbc90b923d53a447cc0949abea71577166e7ad7ceb41f3ea42c79a54997319eacfa45445509da371a8ba0699fce8f7de137882
   languageName: node
   linkType: hard
 

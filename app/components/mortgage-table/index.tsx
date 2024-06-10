@@ -1,39 +1,36 @@
 import Table from "@mui/joy/Table";
 import Decimal from "decimal.js";
+import { memo } from "react";
 import {
+  AmortizationScheduleParameters,
   calculateAmortizationSchedule,
-  convertAnnaulInterestToMonthly,
-  convertQuotedRateToAnnual,
 } from "./mortgageCalculations";
-import { PaymentFrequency } from "./paymentFrequency";
 const formatter = new Intl.NumberFormat("default", {
   style: "currency",
   currency: "USD",
 });
 
-interface MortgageTableProps {
-  principal: Decimal;
-  interestRate: Decimal; // quoted rate, decimal version, eg 6% would be 0.06
-  amortizationPeriod: number;
-  paymentFrequency: PaymentFrequency;
-}
-export default function MortgageTable({
-  principal,
-  interestRate,
-  amortizationPeriod,
-  paymentFrequency,
-}: MortgageTableProps) {
-  // mortgages compound semi-annually
-  const annualInterestRate = convertQuotedRateToAnnual(interestRate);
-  const monthlyInterestRate =
-    convertAnnaulInterestToMonthly(annualInterestRate);
-
-  const amortizationSchedule = calculateAmortizationSchedule(
+// interface MortgageTableProps {
+//   principal: Decimal;
+//   quotedInterestRate: Decimal;
+//   amortizationPeriod: number;
+//   paymentFrequency: PaymentFrequency;
+// }
+export default memo(function MortgageTable(
+  amortizationScheduleParameters: AmortizationScheduleParameters,
+) {
+  const {
     principal,
-    monthlyInterestRate,
+    quotedInterestRate,
     amortizationPeriod,
     paymentFrequency,
-  );
+  } = amortizationScheduleParameters;
+  const amortizationSchedule = calculateAmortizationSchedule({
+    principal,
+    quotedInterestRate,
+    amortizationPeriod,
+    paymentFrequency,
+  });
   const totalPeriodicPayments = amortizationSchedule.reduce(
     (total, entry) => total.plus(entry.periodicPayment),
     new Decimal(0),
@@ -46,7 +43,7 @@ export default function MortgageTable({
     (total, entry) => total.plus(entry.principalPayment),
     new Decimal(0),
   );
-
+  console.log("computing table...");
   return (
     <Table
       borderAxis="xBetween"
@@ -102,4 +99,4 @@ export default function MortgageTable({
       </tfoot>
     </Table>
   );
-}
+});

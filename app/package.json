@@ -19,7 +19,7 @@
     "@babel/runtime": "^7.24.6",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
-    "@mui/base": "^5.0.0-beta.36",
+    "@mui/base": "^5.0.0-beta.40",
     "@mui/icons-material": "^5.15.10",
     "@mui/joy": "^5.0.0-beta.32",
     "@mui/lab": "^5.0.0-alpha.165",

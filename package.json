@@ -12,23 +12,19 @@
     "url": "https://github.com/yawhide/smith-manoeuvre-calculator/issues"
   },
   "homepage": "https://github.com/yawhide/smith-manoeuvre-calculator#readme",
-  "packageManager": "yarn@4.1.0",
+  "packageManager": "yarn@4.3.0",
   "private": true,
   "type": "module",
   "workspaces": [
     "app",
-    "db",
-    "edge",
-    "scripts",
-    "server"
+    "scripts"
   ],
   "scripts": {
     "postinstall": "husky install && node ./scripts/post-install.js",
     "start": "yarn workspace app start",
     "lint": "eslint --cache --report-unused-disable-directives .",
     "test": "vitest",
-    "build": "yarn workspaces foreach -tiA run build",
-    "deploy": "yarn workspace edge deploy"
+    "build": "yarn workspaces foreach -tiA run build"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.11.0",

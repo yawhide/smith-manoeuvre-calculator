@@ -8,6 +8,7 @@ import { PaymentFrequency } from "./paymentFrequency";
  * @returns {Decimal} Annual interest rate
  */
 export function convertQuotedRateToAnnual(quotedRate: Decimal): Decimal {
+  // mortgages compound semi-annually
   // (1 + interestRate / 2) ** 2 - 1;
   return quotedRate.div(2).plus(1).pow(2).minus(1);
 }
@@ -69,7 +70,13 @@ function convertMonthlyInterestToPaymentFrequencyInterest(
   }
 }
 
-interface AmortizationScheduleEntry {
+export interface AmortizationScheduleParameters {
+  principal: Decimal;
+  quotedInterestRate: Decimal;
+  amortizationPeriod: number;
+  paymentFrequency: PaymentFrequency;
+}
+export interface AmortizationScheduleEntry {
   paymentNumber: number;
   periodicPayment: Decimal;
   interestPayment: Decimal;
@@ -77,12 +84,15 @@ interface AmortizationScheduleEntry {
   remainingPrincipal: Decimal;
 }
 
-export function calculateAmortizationSchedule(
-  principal: Decimal,
-  monthlyInterestRate: Decimal,
-  amortizationPeriod: number,
-  paymentFrequency: PaymentFrequency,
-): AmortizationScheduleEntry[] {
+export function calculateAmortizationSchedule({
+  principal,
+  quotedInterestRate,
+  amortizationPeriod,
+  paymentFrequency,
+}: AmortizationScheduleParameters): AmortizationScheduleEntry[] {
+  const annualInterestRate = convertQuotedRateToAnnual(quotedInterestRate);
+  const monthlyInterestRate =
+    convertAnnaulInterestToMonthly(annualInterestRate);
   const monthsToAmortization = 12 * amortizationPeriod;
   const monthlyPeriodicPayment = principal
     .times(monthlyInterestRate)

@@ -2,7 +2,7 @@
 /* SPDX-License-Identifier: MIT */
 
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
-import { Container, Typography } from "@mui/joy";
+import { Button, Container, Typography } from "@mui/joy";
 import FormControl from "@mui/joy/FormControl";
 import FormLabel from "@mui/joy/FormLabel";
 import Input from "@mui/joy/Input";
@@ -11,18 +11,40 @@ import Select, { selectClasses } from "@mui/joy/Select";
 import Decimal from "decimal.js";
 import { useState } from "react";
 import MortgageTable from "../components/mortgage-table";
+import { AmortizationScheduleParameters } from "../components/mortgage-table/mortgageCalculations";
 import { PaymentFrequency } from "../components/mortgage-table/paymentFrequency";
 import { usePageEffect } from "../core/page";
+import { useLocalStorage } from "../utils/useLocalStorage";
+
+const INCOME = "income";
+const HOUSE_VALUE = "houseValue";
+const PRINCIPAL = "principal";
+const INTEREST_RATE = "interestRate";
+const AMORTIZATION_PERIOD = "amortizationPeriod";
+const PAYMENT_FREQUENCY = "paymentFrequency";
 
 export const Component = function Messages(): JSX.Element {
   usePageEffect({ title: "Messages" });
-  // const inputRef = useRef<HTMLInputElement | null>(null);
-  const [principal, setPrincipal] = useState("");
-  const [interestRate, setInterestRate] = useState("");
-  const [amortizationPeriod, setAmortizationPeriod] = useState(25);
-  const [paymentFrequency, setPaymentFrequency] = useState(
+
+  const [income, setIncome] = useLocalStorage(INCOME, "");
+  const [houseValue, setHouseValue] = useLocalStorage(HOUSE_VALUE, "");
+  const [principal, setPrincipal] = useLocalStorage(PRINCIPAL, "");
+  const [interestRate, setInterestRate] = useLocalStorage(INTEREST_RATE, "");
+  const [amortizationPeriod, setAmortizationPeriod] = useLocalStorage(
+    AMORTIZATION_PERIOD,
+    "25",
+  );
+  const [paymentFrequency, setPaymentFrequency] = useLocalStorage(
+    PAYMENT_FREQUENCY,
     PaymentFrequency.Monthly,
   );
+  const [amortizationScheduleParameters, setAmortizationScheduleParameters] =
+    useState({
+      principal: new Decimal(0),
+      quotedInterestRate: new Decimal(0),
+      amortizationPeriod: 0,
+      paymentFrequency: PaymentFrequency.Monthly,
+    } as AmortizationScheduleParameters);
 
   return (
     <Container sx={{ py: 2 }}>
@@ -38,9 +60,11 @@ export const Component = function Messages(): JSX.Element {
             input: {
               min: 0,
               step: 5000,
+              value: income,
             },
           }}
           startDecorator="$"
+          onChange={(e) => setIncome(e.target.value)}
         />
       </FormControl>
       <FormControl>
@@ -52,9 +76,11 @@ export const Component = function Messages(): JSX.Element {
             input: {
               min: 0,
               step: 5000,
+              value: houseValue,
             },
           }}
           startDecorator="$"
+          onChange={(e) => setHouseValue(e.target.value)}
         />
       </FormControl>
       <FormControl>
@@ -70,9 +96,7 @@ export const Component = function Messages(): JSX.Element {
             },
           }}
           startDecorator="$"
-          onChange={(e) => {
-            setPrincipal(e.target.value);
-          }}
+          onChange={(e) => setPrincipal(e.target.value)}
         />
       </FormControl>
       <FormControl>
@@ -133,24 +157,35 @@ export const Component = function Messages(): JSX.Element {
               min: 1,
               max: 30,
               step: 1,
-              value: amortizationPeriod,
+              value: Number(amortizationPeriod),
             },
           }}
           endDecorator="years"
-          onChange={(e) => setAmortizationPeriod(Number(e.target.value))}
+          onChange={(e) => setAmortizationPeriod(e.target.value)}
         />
       </FormControl>
-      {!!principal &&
-        !!interestRate &&
-        !!amortizationPeriod &&
-        paymentFrequency !== null && (
-          <MortgageTable
-            principal={new Decimal(principal)}
-            interestRate={new Decimal(interestRate).div(100)}
-            amortizationPeriod={amortizationPeriod}
-            paymentFrequency={paymentFrequency}
-          />
-        )}
+      <FormControl>
+        <Button
+          onClick={() =>
+            setAmortizationScheduleParameters({
+              principal: new Decimal(principal),
+              quotedInterestRate: new Decimal(interestRate).div(100),
+              amortizationPeriod: amortizationPeriod,
+              paymentFrequency: paymentFrequency,
+            })
+          }
+        >
+          Calculate Amortization Schedule
+        </Button>
+      </FormControl>
+      {amortizationScheduleParameters !== null && (
+        <MortgageTable
+          principal={amortizationScheduleParameters.principal}
+          quotedInterestRate={amortizationScheduleParameters.quotedInterestRate}
+          amortizationPeriod={amortizationScheduleParameters.amortizationPeriod}
+          paymentFrequency={amortizationScheduleParameters.paymentFrequency}
+        />
+      )}
     </Container>
   );
 };
